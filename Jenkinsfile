@@ -15,14 +15,14 @@ pipeline {
                 sh 'mvn clean package'
             }
         }
-        stage('Build Docker Image') {
-            steps {
-                // Build Docker image
-                //sh 'docker build -t your-image-name .'
-                sh 'This is a test Build'
+        // stage('Build Docker Image') {
+        //     steps {
+        //         // Build Docker image
+        //         //sh 'docker build -t your-image-name .'
+        //         sh 'This is a test Build'
               
-            }
-        }
+        //     }
+        // }
         // stage('Deploy Docker Image') {
         //     steps {
         //         // Push Docker image to registry (if needed)
