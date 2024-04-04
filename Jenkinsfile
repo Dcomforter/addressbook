@@ -3,7 +3,6 @@ pipeline {
 
     tools {
         maven 'Maven3'
-        docker 'Docker'
     }
 
     stages {
@@ -19,21 +18,21 @@ pipeline {
         stage('Build Docker Image') {
             steps {
                 // Build Docker image
-                sh 'docker build -t your-image-name .'
+                //sh 'docker build -t your-image-name .'
                 sh 'This is a test Build'
               
             }
         }
-        stage('Deploy Docker Image') {
-            steps {
-                // Push Docker image to registry (if needed)
-                // For example, push to Docker Hub
-                //sh 'docker push your-username/your-image-name'
+        // stage('Deploy Docker Image') {
+        //     steps {
+        //         // Push Docker image to registry (if needed)
+        //         // For example, push to Docker Hub
+        //         //sh 'docker push your-username/your-image-name'
                 
-                // Run Docker container from the built image
-                //sh 'docker run -d -p 8080:8080 your-username/your-image-name'
-                sh 'This is a test deployment'
-            }
-        }
+        //         // Run Docker container from the built image
+        //         //sh 'docker run -d -p 8080:8080 your-username/your-image-name'
+        //         sh 'This is a test deployment'
+        //     }
+        // }
     }
 }
