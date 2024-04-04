@@ -9,7 +9,7 @@ pipeline {
         stage('Build') {
             steps {
                 // Checkout source code from Git
-                git 'https://github.com/Dcomforter/addressbook.git'
+                //git 'https://github.com/Dcomforter/addressbook.git'
                 
                 // Build the Java project using Maven
                 sh 'mvn clean package'
