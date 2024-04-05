@@ -1,4 +1,3 @@
-def docker
 pipeline {
     agent any
 
@@ -23,14 +22,6 @@ pipeline {
                 //sh 'docker build -t your-image-name .'
                 echo "This is a Test Deployment"
                 echo "DevOps makes sense"                
-        
-                def dockerHome = tool 'myDocker'
-                env.PATH = "${dockerHome}/bin:${env.PATH}"
-       
-                script {
-                    
-                sh 'docker build -t addressbook.war .'
-                }
             }
         }
         stage('Deploy') {
