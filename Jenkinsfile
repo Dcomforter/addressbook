@@ -1,3 +1,4 @@
+import org.jenkinsci.plugins.docker.commons.tools.Docker
 pipeline {
     agent any
 
