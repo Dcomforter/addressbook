@@ -24,6 +24,7 @@ pipeline {
                 echo "This is a Test Deployment"
                 echo "DevOps makes sense"
                 script {
+                    docker = new Docker()
                     docker.build('my-image:latest').inside {
                         // Execute commands inside the Docker container
                         sh 'echo "Hello, Docker!"'
