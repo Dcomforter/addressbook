@@ -16,18 +16,17 @@ pipeline {
                 sh 'mvn clean package'
             }
         }
-
-        stage('Initialize'){
-        def dockerHome = tool 'myDocker'
-        env.PATH = "${dockerHome}/bin:${env.PATH}"
-        }
-        
+       
         stage('Test') {
             steps {
                 // Build Docker image
                 //sh 'docker build -t your-image-name .'
                 echo "This is a Test Deployment"
-                echo "DevOps makes sense"
+                echo "DevOps makes sense"                
+        
+                def dockerHome = tool 'myDocker'
+                env.PATH = "${dockerHome}/bin:${env.PATH}"
+       
                 script {
                     
                 sh 'docker build -t addressbook.war .'
