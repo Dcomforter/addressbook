@@ -16,11 +16,16 @@ pipeline {
             }
         }
        
-        stage('Test') {
+        stage('Docker Build') {
             steps {
                 // Build Docker image
                 echo "This is a Test Deployment"
-                echo "DevOps makes sense"  
+                echo "DevOps makes sense"
+                script{
+                    withDockerRegistry(credentialsId: 'dockercred') {
+                        sh 'docker push dcomforter/addressbook.war'
+                    }
+                }
                 sh 'docker build -t addressbook.war .'
                               
             }
