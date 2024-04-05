@@ -15,6 +15,20 @@ pipeline {
                 sh 'mvn clean package'
             }
         }
+        
+        stage('Build Docker Image') {
+            steps {
+                // Build Docker image from Dockerfile
+                sh 'docker build -t addressbook-app .'
+            }
+        }
+        
+        stage('Run Docker Container') {
+            steps {
+                // Run Docker container from the built image
+                sh 'docker run -d -p 9090:8081 addressbook-app'
+            }
+        }
         stage('Test') {
             steps {
                 // Build Docker image
