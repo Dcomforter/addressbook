@@ -23,6 +23,7 @@ pipeline {
                 echo "This is a Test Deployment"
                 echo "DevOps makes sense"
                 script {
+                    def docker = new Docker()
                     def dockerImage = docker.build('my-image:latest')
                     dockerImage.inside {
                         sh 'echo "Hello, Docker!"'
