@@ -15,30 +15,7 @@ pipeline {
                 sh 'mvn clean package'
             }
         }
-
-        stage('Install Docker') {
-            steps {
-                script {
-                    sh 'su root -c "apt-get update"'
-                    sh 'su root -c "apt-get install -y docker.io"'
-                }
-            }
-        }
         
-        stage('Build Docker Image') {
-            steps {
-                // Build Docker image from Dockerfile
-                tool name: 'Docker', type: 'docker'
-                sh 'docker build -t addressbook-app .'
-            }
-        }
-        
-        stage('Run Docker Container') {
-            steps {
-                // Run Docker container from the built image
-                sh 'docker run -d -p 9090:8081 addressbook-app'
-            }
-        }
         stage('Test') {
             steps {
                 // Build Docker image
