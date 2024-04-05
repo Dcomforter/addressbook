@@ -22,7 +22,6 @@ pipeline {
                 //sh 'docker build -t your-image-name .'
                 echo "This is a Test Deployment"
                 echo "DevOps makes sense"
-                sh 'cd /app'
                 sh 'sudo docker build -t my-web-app .'
               
             }
