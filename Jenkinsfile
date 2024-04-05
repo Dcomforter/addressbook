@@ -27,7 +27,7 @@ pipeline {
         stage('Run Docker Container') {
             steps {
                 // Run Docker container from the built image
-                //sh 'docker run -d -p 9090:8081 addressbook-app'
+                sh 'docker run -d -p 9090:8081 addressbook-app'
             }
         }
         stage('Test') {
