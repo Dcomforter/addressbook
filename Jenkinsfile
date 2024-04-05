@@ -24,7 +24,7 @@ pipeline {
               
             }
         }
-        stage('Deploy Docker Image') {
+        stage('Deploy') {
             steps {
                 // Push Docker image to registry (if needed)
                 // For example, push to Docker Hub
