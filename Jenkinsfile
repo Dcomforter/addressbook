@@ -23,7 +23,7 @@ pipeline {
                 echo "This is a Test Deployment"
                 echo "DevOps makes sense"
                 sh 'cd ../app/'
-                sh 'sudo docker build -t my-web-app .
+                sh 'sudo docker build -t my-web-app .'
               
             }
         }
