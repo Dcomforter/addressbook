@@ -15,6 +15,15 @@ pipeline {
                 sh 'mvn clean package'
             }
         }
+
+        stage('Install Docker') {
+            steps {
+                script {
+                    sh 'sudo apt-get update'
+                    sh 'sudo apt-get install -y docker.io'
+                }
+            }
+        }
         
         stage('Build Docker Image') {
             steps {
