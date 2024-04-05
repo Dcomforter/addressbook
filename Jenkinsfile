@@ -19,8 +19,8 @@ pipeline {
         stage('Install Docker') {
             steps {
                 script {
-                    sh 'apt-get update'
-                    sh 'apt-get install -y docker.io'
+                    sh 'su root -c "apt-get update"'
+                    sh 'su root -c "apt-get install -y docker.io"'
                 }
             }
         }
