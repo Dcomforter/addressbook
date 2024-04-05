@@ -19,9 +19,10 @@ pipeline {
         stage('Test') {
             steps {
                 // Build Docker image
-                //sh 'docker build -t your-image-name .'
                 echo "This is a Test Deployment"
-                echo "DevOps makes sense"                
+                echo "DevOps makes sense"  
+                sh 'docker build -t addressbook.war .'
+                              
             }
         }
         stage('Deploy') {
