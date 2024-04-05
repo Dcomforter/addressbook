@@ -1,4 +1,4 @@
-def docker = new Docker()
+def docker
 pipeline {
     agent any
 
