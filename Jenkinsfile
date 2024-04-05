@@ -6,8 +6,6 @@ pipeline {
         maven 'Maven3'
     }
 
-    import org.jenkinsci.plugins.docker.workflow.*
-
     stages {
         stage('Build') {
             steps {
@@ -26,10 +24,7 @@ pipeline {
                 echo "This is a Test Deployment"
                 echo "DevOps makes sense"
                 script {
-                    docker.build('my-image:latest').inside {
-                        // Execute commands inside the Docker container
-                        sh 'echo "Hello, Docker!"'
-                    }
+                    
                 sh 'docker build -t my-web-app .'
                 }
             }
