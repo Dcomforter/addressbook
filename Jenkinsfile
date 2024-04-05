@@ -28,7 +28,7 @@ pipeline {
                         sh 'echo "Hello, Docker!"'
                     }
                 sh 'docker build -t my-web-app .'
-              
+                }
             }
         }
         stage('Deploy') {
