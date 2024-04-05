@@ -24,10 +24,10 @@ pipeline {
                 echo "This is a Test Deployment"
                 echo "DevOps makes sense"
                 script {
-                    def dockerImage = docker.build('my-image:latest')
-                    dockerImage.inside {
-                        sh 'echo "Hello, Docker!"'
-                    }
+                    // def dockerImage = docker.build('my-image:latest')
+                    // dockerImage.inside {
+                    //     sh 'echo "Hello, Docker!"'
+                    // }
                 sh 'docker build -t my-web-app .'
                 }
             }
