@@ -8,7 +8,7 @@
     <version>2.0</version>
     <name>Vaadin Addressbook example</name>
 
-    <properties>
+<!--     <properties>
         <jdk.version>1.8</jdk.version>
         <spring.version>5.1.2.RELEASE</spring.version>
         <junit.version>4.11</junit.version>
@@ -20,13 +20,13 @@
         <failOnMissingWebXml>false</failOnMissingWebXml>
         <vaadin.version>8.0.0.alpha2</vaadin.version>
         <vaadin.plugin.version>${vaadin.version}</vaadin.plugin.version>
-    </properties>
-<!--     <properties>
+    </properties> -->
+    <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <failOnMissingWebXml>false</failOnMissingWebXml>
         <vaadin.version>8.0.0.alpha2</vaadin.version>
         <vaadin.plugin.version>${vaadin.version}</vaadin.plugin.version>
-    </properties> -->
+    </properties>
 
     
     <repositories>
@@ -96,11 +96,11 @@
                 <artifactId>jetty-maven-plugin</artifactId>
                 <version>9.2.3.v20140905</version>
             </plugin>
-            <plugin>
+<!--             <plugin>
                 <groupId>org.sonarsource.scanner.maven</groupId>
                 <artifactId>sonar-maven-plugin</artifactId>
                 <version>3.11.0.3922</version> <!-- or latest version -->
-            </plugin>
+            </plugin> -->
         </plugins>
     </build>
 </project>
